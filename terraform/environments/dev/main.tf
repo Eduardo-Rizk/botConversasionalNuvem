@@ -14,4 +14,6 @@ module "test_infrastructure" {
   openai_api_key           = var.openai_api_key
   openai_llm_model_name    = var.openai_llm_model_name
   firecrawl_api_key        = var.firecrawl_api_key
+  evolution_api_base_url   = var.evolution_api_base_url
+  evolution_api_key        = var.evolution_api_key
 }

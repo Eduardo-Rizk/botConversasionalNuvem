@@ -1,0 +1,3 @@
+openai
+colorlog
+python-dotenv

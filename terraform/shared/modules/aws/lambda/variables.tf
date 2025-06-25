@@ -42,3 +42,13 @@ variable "layers" {
 variable "environment_variables" {
   type = map(string)
 }
+
+variable "create_api_gw" {
+  type    = bool
+  default = false
+}
+
+variable "api_gw_execution_arn" {
+  type    = string
+  default = ""
+}

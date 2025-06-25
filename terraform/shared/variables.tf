@@ -20,4 +20,17 @@ variable "openai_llm_model_name" {
   description = "OpenAI model name"
 }
 
+
+variable "evolution_api_key" {
+  description = "Chave da API do evolution"
+  type        = string
+}
+
+variable "evolution_api_base_url" {
+  description = "URL base da API do evolution"
+  type        = string
+}
+
 variable "firecrawl_api_key"{}
+
+
