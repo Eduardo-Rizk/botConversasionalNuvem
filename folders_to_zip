@@ -1,0 +1,5 @@
+DIR = lambdas
+FOLDERS_TO_ZIP = e_commerce_chatbot
+
+DIR = lambdas/debouncer
+FOLDERS_TO_ZIP = post_message, process_message, send_message_api

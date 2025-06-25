@@ -187,6 +187,7 @@ module "lambda_conversational" {
     OPENAI_API_KEY = var.openai_api_key
     DYNAMODB_CHECKPOINT_TABLE        = module.test_memory.checkpoints_table_name
     DYNAMODB_WRITES_TABLE            = module.test_memory.writes_table_name
+    DYNAMODB_LOGS_TABLE              = module.dynamodb_conversational_logs.table_name
     OPENAI_LLM_MODEL_NAME            = var.openai_llm_model_name
     ENV                              = var.environment
     FIRECRAWL_API_KEY                = var.firecrawl_api_key

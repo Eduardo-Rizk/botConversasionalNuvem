@@ -54,7 +54,7 @@ def create_workflow(config: Dict = None):
     # router
     def route_after_prediction(state: GraphState) -> str:
         routes = {
-            'cancelation': subgraph_fallback.name,
+            'cancellation': subgraph_fallback.name,
             'generic': subgraph_generic.name,
             'order_status': subgraph_order_status.name
             

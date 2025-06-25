@@ -32,7 +32,7 @@ Baseado no conteto da conversa classifique a mensagem recebida em uma das seguin
 ## order_status
 Se a pessoa tem a intenção de checar o status de um pedido, dúvidas sobre a demora de um pedido deve ser classificada aqui
 
-## cancelation
+## cancellation
 Se a pessoa tem a intenção de cancelar algum pedido
 
 ## generic
