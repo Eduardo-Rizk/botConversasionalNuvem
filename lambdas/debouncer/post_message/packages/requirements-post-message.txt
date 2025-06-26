@@ -1,3 +1,5 @@
+pydantic
+pydantic-core
 openai
 colorlog
 python-dotenv

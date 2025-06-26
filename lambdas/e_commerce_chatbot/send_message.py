@@ -3,12 +3,12 @@ import os
 from ast import literal_eval
 import boto3
 
-from lambdas.chatbot_patricia.configs.logging_config import logger
+from shared.configs.logging_config import logger
 
 
 lambda_client = boto3.client('lambda')
 
-TARGET_LAMBDA = os.environ('TARGET_LAMBDA')
+TARGET_LAMBDA = os.getenv('TARGET_LAMBDA')
 
 if not TARGET_LAMBDA:
     raise ValueError("TARGET_LAMBDA environment variable is required")

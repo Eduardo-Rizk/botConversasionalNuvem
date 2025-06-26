@@ -142,6 +142,7 @@ module "lambda_post_message" {
     OPENAI_AUDIO_MODEL_NAME  = "whisper-1"
     OPENAI_VISION_MODEL_NAME = "gpt-4o-mini"
   }
+
   create_api_gw        = true
   api_gw_execution_arn = aws_apigatewayv2_api.conversational_debouncer_http_api.execution_arn
 }
@@ -159,6 +160,7 @@ module "lambda_process_message" {
     PROCESSING_LAMBDA_FUNCTION = module.lambda_conversational.function_name
     # add your chatbot lambda function name here
   }
+
 }
 
 # Creates the lambda that send the messages to the APIs (WhatsApp, Telegram, etc)
@@ -173,6 +175,7 @@ module "lambda_send_message_api" {
     EVOLUTION_API_KEY      = var.evolution_api_key,
     EVOLUTION_API_BASE_URL = var.evolution_api_base_url
   }
+
 }
 
 module "lambda_conversational" {
@@ -193,6 +196,7 @@ module "lambda_conversational" {
     FIRECRAWL_API_KEY                = var.firecrawl_api_key
     TARGET_LAMBDA                    = module.lambda_send_message_api.lambda_arn
   }
+
 }
 
 
