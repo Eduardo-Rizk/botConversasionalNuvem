@@ -48,7 +48,7 @@ class LLMNode(Node, ABC):
         self.tool_choice = tool_choice
         self.llm = ChatOpenAI(
             temperature=0,
-            model_name=os.getenv('OPENAI_LLM_MODEL_NAME')
+            model=os.getenv('OPENAI_LLM_MODEL_NAME')
         )
 
     def _get_messages(self, state: Any) -> List:

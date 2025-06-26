@@ -192,7 +192,7 @@ module "lambda_conversational" {
     DYNAMODB_WRITES_TABLE            = module.test_memory.writes_table_name
     DYNAMODB_LOGS_TABLE              = module.dynamodb_conversational_logs.table_name
     OPENAI_LLM_MODEL_NAME            = var.openai_llm_model_name
-    ENV                              = var.environment
+    ENV                              = "prod"
     FIRECRAWL_API_KEY                = var.firecrawl_api_key
     TARGET_LAMBDA                    = module.lambda_send_message_api.lambda_arn
   }
