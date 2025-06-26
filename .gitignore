@@ -45,3 +45,8 @@ crash.log
 /terraform/environments/prod/deployments/
 
 node_modules
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
