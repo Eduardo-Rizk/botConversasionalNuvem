@@ -66,10 +66,9 @@ def stream_graph(graph, input_data, config: Dict):
             output_data = output
 
         for key in output_data:
-            # Atualizado para capturar os nós corretos do seu grafo
-            if any(node_name in key for node_name in [
-                'generic_node', 'order_status_node', 'fallback_node'
-            ]):
+            # Identify the node by checking if it starts with 'judy' or 'list'
+            # These prefixes indicate that the node contains the desired response from the LLM
+            if key.startswith(('ecom')):
                 collected_outputs.append((key, output_data[key]))
 
     if not collected_outputs:

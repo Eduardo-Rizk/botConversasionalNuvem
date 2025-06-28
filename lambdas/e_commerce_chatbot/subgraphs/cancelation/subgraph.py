@@ -28,16 +28,16 @@ def create_fallback_subgraph(config: Optional[Dict] = None):
 
     get_user_input = builder.add_node(GetUserInputNode(name='get_user_input_fallback'))
     
-    ask_order_number = builder.add_node(SimpleLLMNode(name="ask_order_number", system_message = HELP_WITH_ACTIVE_ORDER), config=config)
+    ask_order_number = builder.add_node(SimpleLLMNode(name="ecom_ask_order_number", system_message = HELP_WITH_ACTIVE_ORDER), config=config)
     
     fetch_order_info = builder.add_node(FunctionalNode("fetch_order_info", load_order_info_node))
     
-    ask_motivation = builder.add_node(SimpleLLMNode(name="ask_motivation", system_message = FALLBACK_ASK_MOTIVATION), config=config)
+    ask_motivation = builder.add_node(SimpleLLMNode(name="ecom_ask_motivation", system_message = FALLBACK_ASK_MOTIVATION), config=config)
     
     fallback_tools_node = builder.add_node(ToolCallingNode(name='contacts_tools_node', tools=fallback_tools))
 
     
-    fallback_node = builder.add_node(SimpleLLMNode(name="fallback_node", system_message= FALLBACK_NODE_PROMPT))
+    fallback_node = builder.add_node(SimpleLLMNode(name="ecom_fallback_node", system_message= FALLBACK_NODE_PROMPT))
     
     
     builder.add_edge(START, ask_order_number)

@@ -25,11 +25,11 @@ def create_order_status_subgraph(config: Optional[Dict] = None):
     
     order_tools = [ check_status]
     
-    ask_order_number = builder.add_node(SimpleLLMNode(name="ask_order_number", system_message = HELP_WITH_ACTIVE_ORDER), config=config)
+    ask_order_number = builder.add_node(SimpleLLMNode(name="ecom_ask_order_number", system_message = HELP_WITH_ACTIVE_ORDER), config=config)
     
     saves_order_number = builder.add_node(StateUpdateStructureOutputLLMNode(name= "saves_order_number_state",output_model=GetsOrderNumber,state_field="order_id", attribute="order_id"), config=config)
     
-    order_status_node = builder.add_node(SimpleLLMNode(name = "order_status_node", system_message=STATUS_ORDER_PROMPT, tools = order_tools), config=config)
+    order_status_node = builder.add_node(SimpleLLMNode(name = "ecom_order_status_node", system_message=STATUS_ORDER_PROMPT, tools = order_tools), config=config)
     
     order_status_tools_node = builder.add_node(ToolCallingNode(name='order_status_tools_nodes', tools=order_tools))
     

@@ -16,7 +16,7 @@ def create_generic_subgraph(config: Optional[Dict] = None):
     
     tools = [analyse_product_by_link]
     
-    generic_node = builder.add_node(SimpleLLMNode(name="generic_node", tools = tools, system_message=BOT_GENERIC))
+    generic_node = builder.add_node(SimpleLLMNode(name="ecom_generic_node", tools = tools, system_message=BOT_GENERIC))
 
     generic_tool_call_node = builder.add_node(ToolCallingNode(name='contacts_tools_node', tools=tools))
     
