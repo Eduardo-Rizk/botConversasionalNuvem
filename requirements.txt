@@ -1,0 +1,28 @@
+# LangChain dependencies
+langchain-core>=0.3.0
+langchain-openai>=0.2.0
+langgraph>=0.2.0
+
+# OpenAI
+openai>=1.0.0
+
+# Pydantic for data validation
+pydantic>=2.10.0,<3.0.0
+pydantic-core
+
+# AWS SDK
+boto3>=1.34.0
+
+# Environment management
+python-dotenv>=1.0.0
+
+# Web scraping
+firecrawl-py
+
+# Logging
+colorlog
+
+# Standard library dependencies (usually included with Python)
+# json, os, time, typing, abc, re, ast, textwrap, datetime, dataclasses
+
+
